@@ -1,0 +1,20 @@
+"""
+create a k variable/pointer
+range based for loop
+if current character is not a val 
+    set k to be current character 
+    increment k
+return 
+
+
+"""
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        k = 0
+        for i in range(len(nums)):
+            if nums[i] != val:
+                nums[k], nums[i] = nums[i], nums[k]
+                k += 1
+        return k
+
+            
